@@ -8,7 +8,6 @@
 #
 # Description: Script in PowerShell to detect vulnerable versions of NVIDIA Graphics Driver in a Windows domain. 
 #
-#
 # CVEs: CVE‑2019‑5665 through CVE‑2019‑5671 and previous
 # 
 # 
