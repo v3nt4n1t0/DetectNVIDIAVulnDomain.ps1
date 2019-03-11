@@ -1,0 +1,1 @@
+# DetectNVIDIAVulnDomain.ps1
