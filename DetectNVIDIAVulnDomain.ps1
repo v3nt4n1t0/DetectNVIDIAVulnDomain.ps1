@@ -1,4 +1,4 @@
-﻿#
+#
 # This software is provided under under the BSD 3-Clause License.
 # See the accompanying LICENSE file for more information.
 #
@@ -63,13 +63,13 @@ if($cred){
                 }
                 else{ "$machine -> The machine does not have NVIDIA GPU or does not contain NVIDIA drivers"}
 
-            }#ScriptBlock
+            }
     
             Remove-PSSession -Session $session
 
             }catch{ Write-Host -ForegroundColor Red -BackgroundColor Yellow "$cname is active, but the check can not be performed. Verify that the Administrator credentials are correct, that the remote computer has WinRM actived, or that Firewall rules are not blocking the connection"}
         }
         else{ Write-Host -ForegroundColor DarkYellow "$cname does not respond to ping or the machine is off. Check that firewall rules are not blocking the connection"}
-    }#foreach
+    }
 }
 else{ Write-Host -ForegroundColor Red -BackgroundColor Yellow "Administrator credentials are required to run the script`n"}
