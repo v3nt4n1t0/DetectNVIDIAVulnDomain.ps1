@@ -22,3 +22,5 @@ or
 PS C:\prueba> powershell.exe -ExecutionPolicy Bypass -File 'E:\Pruebas C# PowerShell\DetectNVIDIAVulnDomain.ps1'
 
 You can try differents methods.
+
+It will ask for the administrator credentials only once, and then, it will perform the checks.
