@@ -13,7 +13,7 @@ CVEs: CVE‑2019‑5665 through CVE‑2019‑5671 and previous
 - Run the script with the Unrestricted or Bypass execution policies from Domain Controller
 
 
-# Usage: 
+## Usage: 
 
 PS E:\Pruebas C# PowerShell> .\DetectNVIDIAVulnDomain.ps1
 
