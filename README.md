@@ -1,1 +1,24 @@
-# DetectNVIDIAVulnDomain.ps1
+# NVIDIA Vulnerability Scanner for Domain
+
+## Description: 
+
+Script in PowerShell to detect vulnerable versions of NVIDIA Graphics Driver in a Windows domain. 
+
+CVEs: CVE‑2019‑5665 through CVE‑2019‑5671 and previous
+
+### Considerations: 
+
+- Well configured WinRM on remote machines
+- Well configured firewall rules
+- Run the script with the Unrestricted or Bypass execution policies from Domain Controller
+
+
+# Usage: 
+
+PS E:\Pruebas C# PowerShell> .\DetectNVIDIAVulnDomain.ps1
+
+or
+
+PS C:\prueba> powershell.exe -ExecutionPolicy Bypass -File 'E:\Pruebas C# PowerShell\DetectNVIDIAVulnDomain.ps1'
+
+You can try differents methods.
