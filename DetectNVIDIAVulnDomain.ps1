@@ -51,11 +51,11 @@ if($cred){
                         else{"$machine -> No vulnerable"}
                     }
                     elseif(($gpu.Caption -like '*Quadro*') -or ($gpu.Caption -like '*NVS*')){
-                        if($versionNVIDIA -lt 4.1917){Write-Host -ForegroundColor Red "$machine -> Vulnerable! Update drivers to version 419.17 o higher"}
+                        if($version -lt 4.1917){Write-Host -ForegroundColor Red "$machine -> Vulnerable! Update drivers to version 419.17 o higher"}
                         else{"$machine -> No vulnerable"}
                     }
                     elseif($gpu.Caption -like '*Tesla*'){
-                        if($versionNVIDIA -lt 4.1229){Write-Host -ForegroundColor Red "$machine -> Vulnerable! Update drivers to version 412.29 o higher"}
+                        if($version -lt 4.1229){Write-Host -ForegroundColor Red "$machine -> Vulnerable! Update drivers to version 412.29 o higher"}
                         else{"$machine -> No vulnerable"}
                     }
                 }
