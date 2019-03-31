@@ -47,17 +47,35 @@ if($cred){
                     $version = $gpuversion.DriverVersion.Substring($gpuversion.DriverVersion.Length - 6, 6)
     
                     if($gpu.Caption -like '*Geforce*') {
-                        if($version -lt 4.1917){Write-Host -ForegroundColor Red "$machine -> Vulnerable! Update drivers to version 419.17 o higher"}
-                        else{"$machine -> No vulnerable"}
+                        if($version -lt 4.1917){Write-Host -ForegroundColor Red -NoNewline "$machine -> Vulnerable drivers! Update drivers to version 419.17 or higher"}
+                        else{Write-Host -NoNewline "$machine -> Non-vulnerable drivers"}
                     }
                     elseif(($gpu.Caption -like '*Quadro*') -or ($gpu.Caption -like '*NVS*')){
-                        if($version -lt 4.1917){Write-Host -ForegroundColor Red "$machine -> Vulnerable! Update drivers to version 419.17 o higher"}
-                        else{"$machine -> No vulnerable"}
+                        if($version -lt 4.1917){Write-Host -ForegroundColor Red -NoNewline "$machine -> Vulnerable drivers! Update drivers to version 419.17 or higher"}
+                        else{Write-Host -NoNewline "$machine -> Non-vulnerable drivers"}
                     }
                     elseif($gpu.Caption -like '*Tesla*'){
-                        if($version -lt 4.1229){Write-Host -ForegroundColor Red "$machine -> Vulnerable! Update drivers to version 412.29 o higher"}
-                        else{"$machine -> No vulnerable"}
+                        if($version -lt 4.1229){Write-Host -ForegroundColor Red -NoNewline "$machine -> Vulnerable drivers! Update drivers to version 412.29 or higher"}
+                        else{Write-Host -NoNewline "$machine -> Non-vulnerable drivers"}
                     }
+
+                    ls HKLM:\SOFTWARE\Microsoft\Windows\CurrentVersion\Uninstall | ForEach-Object -Process {       
+                        if($_.GetValue("DisplayName") -like "NVIDIA GeForce Experience*"){
+                        $nvidiaExperienceVersion = $_.GetValue("DisplayVersion")
+                        $SbStrversion = $nvidiaExperienceVersion.Substring(0,4)
+                        }
+                    }
+
+                    ls HKLM:\SOFTWARE\Wow6432Node\Microsoft\Windows\CurrentVersion\Uninstall | ForEach-Object -Process {
+                        if($_.GetValue("DisplayName") -like "NVIDIA GeForce Experience*"){
+                        $nvidiaExperienceVersion = $_.GetValue("DisplayVersion")
+                        $SbStrversion = $nvidiaExperienceVersion.Substring(0,4)
+                        }
+                    }
+
+                    if(!$nvidiaExperienceVersion){"Does not have GeForce Experience installed" }
+                    elseif($SbStrversion -lt 3.18){Write-Host -ForegroundColor Red "GeForce Experience is vulnerable! Update to version 3.18.0.94 or higher"}else{"NVIDIA GeForce Experience is not vulnerable"}
+
                 }
                 else{ "$machine -> The machine does not have NVIDIA GPU or does not contain NVIDIA drivers"}
 
