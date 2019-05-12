@@ -47,15 +47,15 @@ if($cred){
                     $version = $gpuversion.DriverVersion.Substring($gpuversion.DriverVersion.Length - 6, 6)
     
                     if($gpu.Caption -like '*Geforce*') {
-                        if($version -lt 4.3064){Write-Host -ForegroundColor Red -NoNewline "$machine -> Vulnerable drivers! Update drivers to version 419.17 or higher"}
+                        if($version -lt 4.3064){Write-Host -ForegroundColor Red -NoNewline "$machine -> Vulnerable drivers! Update drivers to version 430.64 or higher"}
                         else{Write-Host -NoNewline "$machine -> Non-vulnerable drivers"}
                     }
                     elseif(($gpu.Caption -like '*Quadro*') -or ($gpu.Caption -like '*NVS*')){
-                        if($version -lt 4.3064){Write-Host -ForegroundColor Red -NoNewline "$machine -> Vulnerable drivers! Update drivers to version 419.17 or higher"}
+                        if($version -lt 4.3064){Write-Host -ForegroundColor Red -NoNewline "$machine -> Vulnerable drivers! Update drivers to version 430.64 or higher"}
                         else{Write-Host -NoNewline "$machine -> Non-vulnerable drivers"}
                     }
                     elseif($gpu.Caption -like '*Tesla*'){
-                        if($version -lt 4.2525){Write-Host -ForegroundColor Red -NoNewline "$machine -> Vulnerable drivers! Update drivers to version 412.29 or higher"}
+                        if($version -lt 4.2525){Write-Host -ForegroundColor Red -NoNewline "$machine -> Vulnerable drivers! Update drivers to version 425.25 or higher"}
                         else{Write-Host -NoNewline "$machine -> Non-vulnerable drivers"}
                     }
 
