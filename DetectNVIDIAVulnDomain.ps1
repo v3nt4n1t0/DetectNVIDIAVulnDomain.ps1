@@ -74,7 +74,7 @@ if($cred){
                     }
 
                     if(!$nvidiaExperienceVersion){" | Does not have GeForce Experience installed" }
-                    elseif($SbStrversion -lt 3.19){Write-Host -NoNewline " | ";Write-Host -ForegroundColor Red "GeForce Experience is vulnerable! Update to version 3.18.0.94 or higher"}
+                    elseif($SbStrversion -lt 3.19){Write-Host -NoNewline " | ";Write-Host -ForegroundColor Red "GeForce Experience is vulnerable! Update to version 3.19.0.94 or higher"}
                     else{" | NVIDIA GeForce Experience is not vulnerable"}
                     
                 }
