@@ -4,7 +4,7 @@
 
 Script in PowerShell to detect vulnerable versions of NVIDIA Graphics Driver and GeForce Experience in a Windows domain. 
 
-CVEs: CVE‑2019‑5675 through CVE‑2019‑5677 and previous. 
+CVEs: CVE‑2019‑5678 and previous. 
 
 ### Considerations: 
 
