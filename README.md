@@ -21,6 +21,9 @@ or
 
 PS C:\prueba> powershell.exe -ExecutionPolicy Bypass -File 'E:\Pruebas C# PowerShell\DetectNVIDIAVulnDomain.ps1'
 
+or (Recommended: Save the command and execute it whenever you want. You do not need to download the script. You will always run the most updated version of the script)
+PS C:\prueba> iex(New-Object Net.WebClient).DownloadString("https://raw.githubusercontent.com/v3nt4n1t0/DetectNVIDIAVulnDomain.ps1/master/DetectNVIDIAVulnDomain.ps1")
+
 You can try differents methods.
 
 It will ask for the administrator credentials only once, and then, it will perform the checks.
