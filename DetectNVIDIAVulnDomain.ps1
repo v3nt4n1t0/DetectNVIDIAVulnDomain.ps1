@@ -23,7 +23,9 @@
 # PS E:\Pruebas C# PowerShell> .\DetectNVIDIAVulnDomain.ps1
 #
 # PS C:\prueba> powershell.exe -ExecutionPolicy Bypass -File 'E:\Pruebas C# PowerShell\DetectNVIDIAVulnDomain.ps1'
-# 
+#
+# PS C:\prueba> iex(New-Object Net.WebClient).DownloadString("https://raw.githubusercontent.com/v3nt4n1t0/DetectNVIDIAVulnDomain.ps1/master/DetectNVIDIAVulnDomain.ps1")
+#
 ################################################################################################################################################## 
 
 $c = Get-ADComputer -Properties IPv4Address -Filter {Enabled -eq $true}
