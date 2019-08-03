@@ -59,7 +59,7 @@ if($cred){
                         else{Write-Host -NoNewline "$machine -> Non-vulnerable drivers"}
                     }
                     elseif($gpu.Caption -like '*Tesla*'){
-                        if($version -lt 4.2526){Write-Host -ForegroundColor Red -NoNewline "$machine -> Vulnerable drivers! Update drivers to version 425.25 or higher"}
+                        if($version -lt 4.2526){Write-Host -ForegroundColor Red -NoNewline "$machine -> Vulnerable drivers! Update drivers to the latest version (Available the week of August 12, 2019)"}
                         else{Write-Host -NoNewline "$machine -> Non-vulnerable drivers"}
                     }
 
