@@ -1,6 +1,7 @@
 <#
 .SYNOPSIS
     NVIDIA Vulnerability Scanner for Domain
+    
 .DESCRIPTION
     Script in PowerShell to detect vulnerable versions of NVIDIA Graphics Driver and GeForce Experience in a Windows domain.
 
@@ -20,12 +21,16 @@
 
     This software is provided under under the BSD 3-Clause License.
     See the accompanying LICENSE file for more information.
+    
 .LINK
     https://github.com/v3nt4n1t0/DetectNVIDIAVulnDomain.ps1
+    
 .EXAMPLE
     .\DetectNVIDIAVulnDomain.ps1
+    
 .EXAMPLE
     powershell.exe -ExecutionPolicy Bypass -File 'E:\Pruebas C# PowerShell\DetectNVIDIAVulnDomain.ps1'
+    
 .EXAMPLE
     iex(New-Object Net.WebClient).DownloadString("https://raw.githubusercontent.com/v3nt4n1t0/DetectNVIDIAVulnDomain.ps1/master/DetectNVIDIAVulnDomain.ps1") 
 #>
