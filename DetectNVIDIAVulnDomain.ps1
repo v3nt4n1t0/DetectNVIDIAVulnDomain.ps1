@@ -9,7 +9,6 @@
    
    
     Considerations: 
-
         - Well configured WinRM on remote machines
         - Well configured firewall rules
         - Run the script with the Unrestricted or Bypass execution policies from Domain Controller
