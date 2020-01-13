@@ -5,7 +5,7 @@
 .DESCRIPTION
     Script in PowerShell to detect vulnerable versions of NVIDIA Graphics Driver and GeForce Experience in a Windows domain.
 
-    CVEs: CVE‑2019‑5687 and previous.
+    CVEs: CVE‑2019‑5702 and previous.
    
    
     Considerations: 
@@ -82,7 +82,7 @@ if($cred){
                     }
 
                     if(!$nvidiaExperienceVersion){" | Does not have GeForce Experience installed" }
-                    elseif($SbStrversion -lt 3.19){Write-Host -NoNewline " | ";Write-Host -ForegroundColor Red "GeForce Experience is vulnerable! Update to version 3.19.0.94 or higher"}
+                    elseif($SbStrversion -lt 3.20){Write-Host -NoNewline " | ";Write-Host -ForegroundColor Red "GeForce Experience is vulnerable! Update to version 3.20.2 or higher"}
                     else{" | NVIDIA GeForce Experience is not vulnerable"}
                     
                 }
